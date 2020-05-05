@@ -39,11 +39,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomLoginDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eis-4n-bxm">
-                                <rect key="frame" x="40" y="714.5" width="334" height="107.5"/>
+                                <rect key="frame" x="40" y="660.5" width="334" height="107.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caQ-q8-oGD">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -91,11 +91,11 @@
             <objects>
                 <viewController id="mzp-DF-btH" customClass="SignUpViewController" customModule="CustomLoginDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zXE-pE-49g">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gzu-NR-y6x">
-                                <rect key="frame" x="40" y="84" width="334" height="370.5"/>
+                                <rect key="frame" x="40" y="40" width="334" height="420.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hvh-sG-hnB">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -133,6 +133,13 @@
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGO-j2-iWN">
+                                        <rect key="frame" x="0.0" y="390.5" width="334" height="30"/>
+                                        <state key="normal" title="Back"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Dru-mk-w74"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="imX-1G-oO9" firstAttribute="height" secondItem="Hvh-sG-hnB" secondAttribute="height" id="3uw-ab-O5g"/>
@@ -152,6 +159,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="XkB-Mp-EB7"/>
                     <connections>
+                        <outlet property="backButton" destination="xGO-j2-iWN" id="R3P-4w-1JA"/>
                         <outlet property="emailTextField" destination="9jQ-My-7l5" id="wEc-Su-cSe"/>
                         <outlet property="errorLabel" destination="Ugc-SX-jkn" id="CYu-Hi-tKE"/>
                         <outlet property="firstNameTextField" destination="Hvh-sG-hnB" id="rg3-If-I4H"/>
@@ -169,11 +177,11 @@
             <objects>
                 <viewController id="3B6-EE-lgh" customClass="LoginViewController" customModule="CustomLoginDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qOQ-uR-mZa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lTZ-eE-qf0">
-                                <rect key="frame" x="40" y="84" width="334" height="230.5"/>
+                                <rect key="frame" x="40" y="40" width="334" height="280.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L0A-ss-lqm">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -201,6 +209,13 @@
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9q-p7-C5B">
+                                        <rect key="frame" x="0.0" y="250.5" width="334" height="30"/>
+                                        <state key="normal" title="Back"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="BUI-TF-yuQ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="D55-CX-OGw" firstAttribute="height" secondItem="L0A-ss-lqm" secondAttribute="height" id="202-4M-v4D"/>
@@ -218,6 +233,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="LOQ-7t-DLF"/>
                     <connections>
+                        <outlet property="backButton" destination="H9q-p7-C5B" id="Lot-fR-qnU"/>
                         <outlet property="emailTextField" destination="L0A-ss-lqm" id="CR1-gZ-pnL"/>
                         <outlet property="errorLabel" destination="5OK-Uv-LLV" id="EPd-RA-9w7"/>
                         <outlet property="loginButton" destination="fl9-fG-66f" id="2qr-15-fUW"/>
@@ -226,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ql-Z7-1JR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="805"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="804.91071428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zVE-gR-N00">
@@ -246,4 +262,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="98.4375"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Dru-mk-w74"/>
+    </inferredMetricsTieBreakers>
 </document>
