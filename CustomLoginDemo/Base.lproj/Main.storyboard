@@ -127,7 +127,7 @@
                                             <action selector="signUpTapped:" destination="mzp-DF-btH" eventType="touchUpInside" id="ovf-sf-w44"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugc-SX-jkn">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugc-SX-jkn">
                                         <rect key="frame" x="0.0" y="350" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -175,12 +175,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lTZ-eE-qf0">
                                 <rect key="frame" x="40" y="84" width="334" height="230.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L0A-ss-lqm">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L0A-ss-lqm">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D55-CX-OGw">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D55-CX-OGw">
                                         <rect key="frame" x="0.0" y="70" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -195,7 +195,7 @@
                                             <action selector="loginTapped:" destination="3B6-EE-lgh" eventType="touchUpInside" id="HKr-CR-z2T"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5OK-Uv-LLV">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5OK-Uv-LLV">
                                         <rect key="frame" x="0.0" y="210" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -218,10 +218,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="LOQ-7t-DLF"/>
                     <connections>
+                        <outlet property="emailTextField" destination="L0A-ss-lqm" id="CR1-gZ-pnL"/>
                         <outlet property="errorLabel" destination="5OK-Uv-LLV" id="EPd-RA-9w7"/>
-                        <outlet property="firstNameTextField" destination="L0A-ss-lqm" id="src-sF-PlL"/>
-                        <outlet property="lastNameTextField" destination="D55-CX-OGw" id="bmq-9t-0Io"/>
                         <outlet property="loginButton" destination="fl9-fG-66f" id="2qr-15-fUW"/>
+                        <outlet property="passwordTextField" destination="D55-CX-OGw" id="TAA-Ia-jC2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ql-Z7-1JR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
