@@ -85,7 +85,16 @@ class SignUpViewController: UIViewController {
         else {
             // create the user
             
-            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, err) in
+            // create clean version of the data
+            let firstname = firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            let lastname = lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            let email = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            Auth.auth().createUser(withEmail: email! , password: password!) { (result, err) in
                 // check for errors
                 if err != nil {
                     // there was an error creating the user
@@ -94,11 +103,20 @@ class SignUpViewController: UIViewController {
                 else {
                     // User was created successfully, now store the first name and the last name
                     let db = Firestore.firestore()
+                    db.collection("users").addDocument(data: ["firstname": firstname!, "lastname": lastname!, "uid":result!.user.uid ]) { (error) in
+                        
+                        if error != nil {
+                             //show error message
+                            self.showError("Error saving user data ")
+                        }
+                    }
                     
+                    // transition to the home screen
+                    self.transitionToHome()
                 }
             }
             
-            // transition to the home screen
+            
              
         }
         
@@ -109,6 +127,9 @@ class SignUpViewController: UIViewController {
          errorLabel.alpha = 1
     }
    
+    func transitionToHome() {
+        
+    }
     
 }
 
